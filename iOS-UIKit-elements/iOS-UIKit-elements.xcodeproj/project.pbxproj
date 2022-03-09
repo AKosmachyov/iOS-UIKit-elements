@@ -13,6 +13,7 @@
 		85CB76F627D7CD7A00A18A6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85CB76F427D7CD7A00A18A6A /* Main.storyboard */; };
 		85CB76F827D7CD7B00A18A6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85CB76F727D7CD7B00A18A6A /* Assets.xcassets */; };
 		85CB76FB27D7CD7B00A18A6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85CB76F927D7CD7B00A18A6A /* LaunchScreen.storyboard */; };
+		85CB770327D7E39800A18A6A /* СollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CB770227D7E39800A18A6A /* СollectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		85CB76F727D7CD7B00A18A6A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85CB76FA27D7CD7B00A18A6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		85CB76FC27D7CD7B00A18A6A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		85CB770227D7E39800A18A6A /* СollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "СollectionViewController.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				85CB76F727D7CD7B00A18A6A /* Assets.xcassets */,
 				85CB76F927D7CD7B00A18A6A /* LaunchScreen.storyboard */,
 				85CB76FC27D7CD7B00A18A6A /* Info.plist */,
+				85CB770227D7E39800A18A6A /* СollectionViewController.swift */,
 			);
 			path = "iOS-UIKit-elements";
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 			files = (
 				85CB76F327D7CD7A00A18A6A /* ViewController.swift in Sources */,
 				85CB76EF27D7CD7A00A18A6A /* AppDelegate.swift in Sources */,
+				85CB770327D7E39800A18A6A /* СollectionViewController.swift in Sources */,
 				85CB76F127D7CD7A00A18A6A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
