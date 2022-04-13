@@ -27,7 +27,7 @@ class СollectionViewController: UICollectionViewController {
     private func listLayout() -> UICollectionViewCompositionalLayout {
         var listConfiguration = UICollectionLayoutListConfiguration(appearance: .grouped)
         listConfiguration.showsSeparators = false
-        listConfiguration.headerMode = .supplementary
+        listConfiguration.headerMode = .firstItemInSection
         listConfiguration.backgroundColor = .clear
         return UICollectionViewCompositionalLayout.list(using: listConfiguration)
     }
@@ -39,7 +39,8 @@ extension СollectionViewController {
     
     func makeDataSource() -> DataSource {
         let cellRegistration = UICollectionView.CellRegistration(handler: cellRegistrationHandler)
-        return DataSource(collectionView: collectionView) { (collectionView: UICollectionView, indexPath: IndexPath, itemIdentifier: Reminder.ID) in
+        return DataSource(collectionView: collectionView) {
+            (collectionView: UICollectionView, indexPath: IndexPath, itemIdentifier: Reminder.ID) in
             return collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: itemIdentifier)
         }
     }
@@ -66,10 +67,9 @@ extension СollectionViewController {
         doneButtonConfiguration.tintColor = .green
         cell.accessibilityCustomActions = [ doneButtonAccessibilityAction(for: reminder) ]
         cell.accessibilityValue = reminder.isComplete ? "Completed" : "Not completed"
-        cell.accessories = [ .customView(configuration: doneButtonConfiguration), .disclosureIndicator(displayed: .always) ]
+        cell.accessories = [.customView(configuration: doneButtonConfiguration)]
         
-        var backgroundConfiguration = UIBackgroundConfiguration.listGroupedCell()
-        backgroundConfiguration.backgroundColor = .lightGray
+        let backgroundConfiguration = UIBackgroundConfiguration.listGroupedCell()
         cell.backgroundConfiguration = backgroundConfiguration
     }
     

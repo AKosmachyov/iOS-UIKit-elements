@@ -47,7 +47,7 @@
 * <a id='scroll-view'></a>(<a href='#scroll-view'>link</a>)(<a href='https://developer.apple.com/documentation/uikit/uiscrollview'>🍏 Developer</a>) **UIScrollView** 
 <br> A view that allows the scrolling and zooming of its contained views.
 
-* <a id='table-view'></a>(<a href='#table-view'>link</a>)(<a href='https://developer.apple.com/documentation/uikit/uitableview'>🍏 Developer</a>) **UITableView** 
+* <a id='table-view'></a>(<a href='#table-view'>link</a>)(<a href='https://developer.apple.com/documentation/uikit/uitableview'>🍏 Developer</a>)(<a href='https://github.com/BrianSlick/Book-UITableViewGuide'>📖 Guide</a>) **UITableView** 
 <br> A view that presents data using rows in a single column.
 
 * <a id=''></a>(<a href='#'>link</a>)(<a href='https://developer.apple.com/documentation/uikit/uicollectionview'>🍏 Developer</a>) **UICollectionView** 
@@ -110,7 +110,7 @@
 
 - UINavigationBar
 - UINavigationItem
-- UIToolbar
+- UIToolbar - bottom bar
 - UIBarButtonItem
 - UITabBar
 - UITabBarItem

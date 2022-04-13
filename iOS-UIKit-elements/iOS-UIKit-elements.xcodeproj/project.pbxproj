@@ -7,9 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		857A35F827DA8C63006738B6 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857A35F727DA8C63006738B6 /* HomeViewController.swift */; };
+		857DF54F27DBA80700CC3164 /* TextFieldController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857DF54E27DBA80700CC3164 /* TextFieldController.swift */; };
 		85CB76EF27D7CD7A00A18A6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CB76EE27D7CD7A00A18A6A /* AppDelegate.swift */; };
 		85CB76F127D7CD7A00A18A6A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CB76F027D7CD7A00A18A6A /* SceneDelegate.swift */; };
-		85CB76F327D7CD7A00A18A6A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CB76F227D7CD7A00A18A6A /* ViewController.swift */; };
 		85CB76F627D7CD7A00A18A6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85CB76F427D7CD7A00A18A6A /* Main.storyboard */; };
 		85CB76F827D7CD7B00A18A6A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85CB76F727D7CD7B00A18A6A /* Assets.xcassets */; };
 		85CB76FB27D7CD7B00A18A6A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85CB76F927D7CD7B00A18A6A /* LaunchScreen.storyboard */; };
@@ -17,10 +18,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		857A35F727DA8C63006738B6 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		857DF54E27DBA80700CC3164 /* TextFieldController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldController.swift; sourceTree = "<group>"; };
 		85CB76EB27D7CD7A00A18A6A /* iOS-UIKit-elements.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-UIKit-elements.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		85CB76EE27D7CD7A00A18A6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85CB76F027D7CD7A00A18A6A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		85CB76F227D7CD7A00A18A6A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		85CB76F527D7CD7A00A18A6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		85CB76F727D7CD7B00A18A6A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		85CB76FA27D7CD7B00A18A6A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -39,6 +41,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		857DF54D27DBA7EC00CC3164 /* Form control */ = {
+			isa = PBXGroup;
+			children = (
+				857DF54E27DBA80700CC3164 /* TextFieldController.swift */,
+			);
+			path = "Form control";
+			sourceTree = "<group>";
+		};
+		85AAED502807487B00380B75 /* Layout Containers */ = {
+			isa = PBXGroup;
+			children = (
+				85CB770227D7E39800A18A6A /* СollectionViewController.swift */,
+			);
+			path = "Layout Containers";
+			sourceTree = "<group>";
+		};
 		85CB76E227D7CD7A00A18A6A = {
 			isa = PBXGroup;
 			children = (
@@ -60,12 +78,13 @@
 			children = (
 				85CB76EE27D7CD7A00A18A6A /* AppDelegate.swift */,
 				85CB76F027D7CD7A00A18A6A /* SceneDelegate.swift */,
-				85CB76F227D7CD7A00A18A6A /* ViewController.swift */,
+				857A35F727DA8C63006738B6 /* HomeViewController.swift */,
 				85CB76F427D7CD7A00A18A6A /* Main.storyboard */,
 				85CB76F727D7CD7B00A18A6A /* Assets.xcassets */,
 				85CB76F927D7CD7B00A18A6A /* LaunchScreen.storyboard */,
 				85CB76FC27D7CD7B00A18A6A /* Info.plist */,
-				85CB770227D7E39800A18A6A /* СollectionViewController.swift */,
+				85AAED502807487B00380B75 /* Layout Containers */,
+				857DF54D27DBA7EC00CC3164 /* Form control */,
 			);
 			path = "iOS-UIKit-elements";
 			sourceTree = "<group>";
@@ -141,8 +160,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				85CB76F327D7CD7A00A18A6A /* ViewController.swift in Sources */,
+				857A35F827DA8C63006738B6 /* HomeViewController.swift in Sources */,
 				85CB76EF27D7CD7A00A18A6A /* AppDelegate.swift in Sources */,
+				857DF54F27DBA80700CC3164 /* TextFieldController.swift in Sources */,
 				85CB770327D7E39800A18A6A /* СollectionViewController.swift in Sources */,
 				85CB76F127D7CD7A00A18A6A /* SceneDelegate.swift in Sources */,
 			);
