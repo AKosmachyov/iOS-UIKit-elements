@@ -47,11 +47,15 @@
 * <a id='scroll-view'></a>(<a href='#scroll-view'>link</a>)(<a href='https://developer.apple.com/documentation/uikit/uiscrollview'>🍏 Developer</a>) **UIScrollView** 
 <br> A view that allows the scrolling and zooming of its contained views.
 
+https://medium.com/@esskeetit/как-работает-uiscrollview-2e7052032d97#9f56
+
 * <a id='table-view'></a>(<a href='#table-view'>link</a>)(<a href='https://developer.apple.com/documentation/uikit/uitableview'>🍏 Developer</a>)(<a href='https://github.com/BrianSlick/Book-UITableViewGuide'>📖 Guide</a>) **UITableView** 
 <br> A view that presents data using rows in a single column.
 
-* <a id=''></a>(<a href='#'>link</a>)(<a href='https://developer.apple.com/documentation/uikit/uicollectionview'>🍏 Developer</a>) **UICollectionView** 
+* <a id='collection-view'></a>(<a href='#collection-view'>link</a>)(<a href='https://developer.apple.com/documentation/uikit/uicollectionview'>🍏 Developer</a>) **UICollectionView** 
 <br> An object that manages an ordered collection of data items and presents them using customizable layouts.
+
+[Apple: Model collection views](https://developer.apple.com/documentation/uikit/views_and_controls/collection_views/implementing_modern_collection_views)
 
 * <a id='segment'></a>(<a href='#segment'>link</a>)(<a href='https://developer.apple.com/documentation/uikit/uisegmentedcontrol'>🍏 Developer</a>) **UISegmentedControl** 
 <br> A horizontal control that consists of multiple segments, each segment functioning as a discrete button.

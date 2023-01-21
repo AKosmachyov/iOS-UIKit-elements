@@ -40,10 +40,14 @@ extension HomeViewController {
 
 extension HomeViewController: UICollectionViewDelegate {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let tuple = array[indexPath.section][indexPath.row + 1]
-        guard let id = tuple.1 else { return }
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let controller = storyboard.instantiateViewController(withIdentifier: id)
+//        let tuple = array[indexPath.section][indexPath.row + 1]
+//        guard let id = tuple.1 else { return }
+//        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//        let controller = storyboard.instantiateViewController(withIdentifier: id)
+        
+        let storyboard = UIStoryboard(name: "Layout Containers", bundle: nil)
+//        let controller = // storyboard.instantiateViewController(withIdentifier: id)
+        let controller = storyboard.instantiateInitialViewController()!
         navigationController?.pushViewController(controller, animated: true)
     }
 }
