@@ -17,7 +17,7 @@ class MenuViewController: UIViewController {
     var dataSource: DataSource! = nil
     
     var isEnoughSpaceForDetails: Bool {
-      return splitViewController?.traitCollection.horizontalSizeClass == .regular
+        return splitViewController?.traitCollection.horizontalSizeClass == .regular
     }
     
     enum Section {
@@ -38,7 +38,7 @@ class MenuViewController: UIViewController {
         collectionView.delegate = self
         self.collectionView = collectionView
     }
-                                              
+    
     private func generateLayout() -> UICollectionViewLayout {
         let listConfiguration = UICollectionLayoutListConfiguration(appearance: .sidebar)
         let layout = UICollectionViewCompositionalLayout.list(using: listConfiguration)
@@ -56,10 +56,10 @@ class MenuViewController: UIViewController {
             
             contentConfiguration.textProperties.font = .preferredFont(forTextStyle: .headline)
             cell.contentConfiguration = contentConfiguration
-
+            
             let disclosureOptions = UICellAccessory.OutlineDisclosureOptions(style: .header)
             cell.accessories = [.outlineDisclosure(options: disclosureOptions)]
-
+            
             cell.backgroundConfiguration = UIBackgroundConfiguration.clear()
         }
         
@@ -72,9 +72,9 @@ class MenuViewController: UIViewController {
             }
             
             cell.contentConfiguration = contentConfiguration
-
+            
             cell.backgroundConfiguration = UIBackgroundConfiguration.clear()
-
+            
             cell.accessories = self.isEnoughSpaceForDetails ? [] : [.disclosureIndicator()]
         }
         
@@ -115,13 +115,20 @@ extension MenuViewController: UICollectionViewDelegate {
         collectionView.deselectItem(at: indexPath, animated: true)
         
         if let storyboardName = menuItem.storyboardName {
-            pushOrPresentStoryboard(storyboardName: storyboardName)
+            pushOrPresentStoryboard(storyboardName: storyboardName, storyboardID: menuItem.storyboardID)
         }
     }
     
-    private func pushOrPresentStoryboard(storyboardName: String) {
-        let exampleStoryboard = UIStoryboard(name: storyboardName, bundle: nil)
-        if let exampleViewController = exampleStoryboard.instantiateInitialViewController() {
+    private func pushOrPresentStoryboard(storyboardName: String, storyboardID: String?) {
+        let storyboard = UIStoryboard(name: storyboardName, bundle: nil)
+        
+        if let storyboardID {
+            let vc = storyboard.instantiateViewController(withIdentifier: storyboardID)
+            pushOrPresentViewController(viewController: vc)
+            return
+        }
+        
+        if let exampleViewController = storyboard.instantiateInitialViewController() {
             pushOrPresentViewController(viewController: exampleViewController)
         }
     }

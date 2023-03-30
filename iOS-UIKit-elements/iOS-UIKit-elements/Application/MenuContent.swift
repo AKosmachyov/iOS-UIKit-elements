@@ -11,12 +11,20 @@ class MenuItem: Identifiable, Hashable, Equatable {
     let title: String
     let subItems: [MenuItem]
     let storyboardName: String?
+    let storyboardID: String?
     let imageName: String?
     
-    init(title: String, imageName: String?, storyboardName: String? = nil, subItems: [MenuItem] = []) {
+    init(
+        title: String,
+        imageName: String?,
+        storyboardName: String? = nil,
+        storyboardID: String? = nil,
+        subItems: [MenuItem] = []
+    ) {
         self.title = title
         self.subItems = subItems
         self.storyboardName = storyboardName
+        self.storyboardID = storyboardID
         self.imageName = imageName
     }
     
@@ -56,7 +64,10 @@ class MenuContent {
     }()
     
     lazy var layoutContainersMenuItem: MenuItem = {
-        return MenuItem(title: "Layout Containers", imageName: "square.stack.3d.down.right")
+        let items = [
+            MenuItem(title: "UICollectionView", imageName: nil, storyboardName: "Layout Containers", storyboardID: "collectionViewController"),
+        ]
+        return MenuItem(title: "Layout Containers", imageName: nil, subItems: items)
     }()
     
     lazy var contentViewMenuItem: MenuItem = {
