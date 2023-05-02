@@ -12,6 +12,8 @@
 		856B5972290E9F5600DAC1DD /* MenuContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856B5971290E9F5600DAC1DD /* MenuContent.swift */; };
 		857A35F827DA8C63006738B6 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857A35F727DA8C63006738B6 /* TableViewController.swift */; };
 		857DF54F27DBA80700CC3164 /* TextFieldController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857DF54E27DBA80700CC3164 /* TextFieldController.swift */; };
+		85B840AD2A01852F0023083C /* BaseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85B840AC2A01852F0023083C /* BaseListViewController.swift */; };
+		85B840AF2A0188E60023083C /* FormControl.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85B840AE2A0188E60023083C /* FormControl.storyboard */; };
 		85CB76EF27D7CD7A00A18A6A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CB76EE27D7CD7A00A18A6A /* AppDelegate.swift */; };
 		85CB76F127D7CD7A00A18A6A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85CB76F027D7CD7A00A18A6A /* SceneDelegate.swift */; };
 		85CB76F627D7CD7A00A18A6A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85CB76F427D7CD7A00A18A6A /* Main.storyboard */; };
@@ -27,6 +29,8 @@
 		856B5971290E9F5600DAC1DD /* MenuContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuContent.swift; sourceTree = "<group>"; };
 		857A35F727DA8C63006738B6 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		857DF54E27DBA80700CC3164 /* TextFieldController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldController.swift; sourceTree = "<group>"; };
+		85B840AC2A01852F0023083C /* BaseListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseListViewController.swift; sourceTree = "<group>"; };
+		85B840AE2A0188E60023083C /* FormControl.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = FormControl.storyboard; sourceTree = "<group>"; };
 		85CB76EB27D7CD7A00A18A6A /* iOS-UIKit-elements.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-UIKit-elements.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		85CB76EE27D7CD7A00A18A6A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85CB76F027D7CD7A00A18A6A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,6 +68,7 @@
 				85CB76F027D7CD7A00A18A6A /* SceneDelegate.swift */,
 				856B596F290E9BB200DAC1DD /* MenuViewController.swift */,
 				856B5971290E9F5600DAC1DD /* MenuContent.swift */,
+				85B840AC2A01852F0023083C /* BaseListViewController.swift */,
 			);
 			path = Application;
 			sourceTree = "<group>";
@@ -72,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				857DF54E27DBA80700CC3164 /* TextFieldController.swift */,
+				85B840AE2A0188E60023083C /* FormControl.storyboard */,
 			);
 			path = "Form control";
 			sourceTree = "<group>";
@@ -185,6 +191,7 @@
 			files = (
 				85CB76FB27D7CD7B00A18A6A /* LaunchScreen.storyboard in Resources */,
 				85CB76F827D7CD7B00A18A6A /* Assets.xcassets in Resources */,
+				85B840AF2A0188E60023083C /* FormControl.storyboard in Resources */,
 				85CB76F627D7CD7A00A18A6A /* Main.storyboard in Resources */,
 				85E655E62809F2D000FBA69C /* Layout Containers.storyboard in Resources */,
 			);
@@ -199,6 +206,7 @@
 			files = (
 				857A35F827DA8C63006738B6 /* TableViewController.swift in Sources */,
 				856B5970290E9BB200DAC1DD /* MenuViewController.swift in Sources */,
+				85B840AD2A01852F0023083C /* BaseListViewController.swift in Sources */,
 				85CB76EF27D7CD7A00A18A6A /* AppDelegate.swift in Sources */,
 				857DF54F27DBA80700CC3164 /* TextFieldController.swift in Sources */,
 				852B7A9929D6080200D5F719 /* SkeletonPlaceholderViewController.swift in Sources */,

@@ -53,7 +53,7 @@ class MenuContent {
     
     lazy var formControlMenuItem: MenuItem = {
         let items = [
-            MenuItem(title: "UITextField", imageName: nil, storyboardName: nil),
+            MenuItem(title: "UITextField", imageName: nil, storyboardName: "FormControl", storyboardID: "textField"),
             MenuItem(title: "UITextView", imageName: nil, storyboardName: nil),
             MenuItem(title: "UIButton", imageName: nil, storyboardName: nil),
             MenuItem(title: "UISlider", imageName: nil, storyboardName: nil),

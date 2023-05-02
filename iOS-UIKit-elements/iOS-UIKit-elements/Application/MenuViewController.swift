@@ -114,6 +114,10 @@ extension MenuViewController: UICollectionViewDelegate {
         
         collectionView.deselectItem(at: indexPath, animated: true)
         
+        showItem(menuItem)
+    }
+    
+    private func showItem(_ menuItem: MenuItem) {
         if let storyboardName = menuItem.storyboardName {
             pushOrPresentStoryboard(storyboardName: storyboardName, storyboardID: menuItem.storyboardID)
             return
