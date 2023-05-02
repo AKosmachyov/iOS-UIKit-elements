@@ -116,6 +116,11 @@ extension MenuViewController: UICollectionViewDelegate {
         
         if let storyboardName = menuItem.storyboardName {
             pushOrPresentStoryboard(storyboardName: storyboardName, storyboardID: menuItem.storyboardID)
+            return
+        }
+        
+        if let viewControllerType = menuItem.viewController {
+            pushOrPresentViewController(viewController: viewControllerType.init())
         }
     }
     

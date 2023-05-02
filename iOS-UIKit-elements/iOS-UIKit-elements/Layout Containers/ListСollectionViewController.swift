@@ -1,5 +1,5 @@
 //
-//  CollectionView.swift
+//  ListСollectionViewController.swift
 //  iOS-UIKit-elements
 //
 //  Created by Alexander Kosmachyov on 8.03.22.
@@ -10,9 +10,9 @@
 import Foundation
 import UIKit
 
-class СollectionViewController: UICollectionViewController {
-    lazy var dataSource = makeDataSource()
-    var reminders: [Reminder] = Reminder.sampleData
+class ListСollectionViewController: UICollectionViewController {
+    private lazy var dataSource = makeDataSource()
+    private var reminders: [Reminder] = Reminder.sampleData
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,11 +33,11 @@ class СollectionViewController: UICollectionViewController {
     }
 }
 
-extension СollectionViewController {
-    typealias DataSource = UICollectionViewDiffableDataSource<Int, Reminder.ID>
-    typealias Snapshot = NSDiffableDataSourceSnapshot<Int, Reminder.ID>
+extension ListСollectionViewController {
+    private typealias DataSource = UICollectionViewDiffableDataSource<Int, Reminder.ID>
+    private typealias Snapshot = NSDiffableDataSourceSnapshot<Int, Reminder.ID>
     
-    func makeDataSource() -> DataSource {
+    private func makeDataSource() -> DataSource {
         let cellRegistration = UICollectionView.CellRegistration(handler: cellRegistrationHandler)
         return DataSource(collectionView: collectionView) {
             (collectionView: UICollectionView, indexPath: IndexPath, itemIdentifier: Reminder.ID) in
@@ -45,7 +45,7 @@ extension СollectionViewController {
         }
     }
     
-    func updateSnapshot(reloading ids: [Reminder.ID] = []) {
+    private func updateSnapshot(reloading ids: [Reminder.ID] = []) {
         var snapshot = Snapshot()
         snapshot.appendSections([0])
         snapshot.appendItems(reminders.map { $0.id })
@@ -55,7 +55,7 @@ extension СollectionViewController {
         dataSource.apply(snapshot)
     }
     
-    func cellRegistrationHandler(cell: UICollectionViewListCell, indexPath: IndexPath, id: Reminder.ID) {
+    private func cellRegistrationHandler(cell: UICollectionViewListCell, indexPath: IndexPath, id: Reminder.ID) {
         let reminder = reminder(for: id)
         var contentConfiguration = cell.defaultContentConfiguration()
         contentConfiguration.text = reminder.title
@@ -73,7 +73,7 @@ extension СollectionViewController {
         cell.backgroundConfiguration = backgroundConfiguration
     }
     
-    func completeReminder(with id: Reminder.ID) {
+    private func completeReminder(with id: Reminder.ID) {
         var reminder = reminder(for: id)
         reminder.isComplete.toggle()
         update(reminder, with: id)
@@ -99,25 +99,25 @@ extension СollectionViewController {
         return UICellAccessory.CustomViewConfiguration(customView: button, placement: .leading(displayed: .always))
     }
     
-    func reminder(for id: Reminder.ID) -> Reminder {
+    private func reminder(for id: Reminder.ID) -> Reminder {
         let index = reminders.indexOfReminder(with: id)
         return reminders[index]
     }
     
-    func update(_ reminder: Reminder, with id: Reminder.ID) {
+    private func update(_ reminder: Reminder, with id: Reminder.ID) {
         let index = reminders.indexOfReminder(with: id)
         reminders[index] = reminder
     }
 }
 
-extension СollectionViewController {
-    @objc func didPressDoneButton(_ sender: ReminderDoneButton) {
+extension ListСollectionViewController {
+    @objc private func didPressDoneButton(_ sender: ReminderDoneButton) {
         guard let id = sender.id else { return }
         completeReminder(with: id)
     }
 }
 
-struct Reminder: Identifiable {
+fileprivate struct Reminder: Identifiable {
     var id: String = UUID().uuidString
     var title: String
     var dueDate: Date
@@ -156,7 +156,7 @@ extension Date {
 }
 
 extension Array where Element == Reminder {
-    func indexOfReminder(with id: Reminder.ID) -> Self.Index {
+    fileprivate func indexOfReminder(with id: Reminder.ID) -> Self.Index {
         guard let index = firstIndex(where: { $0.id == id }) else {
             fatalError()
         }
@@ -164,6 +164,6 @@ extension Array where Element == Reminder {
     }
 }
 
-class ReminderDoneButton: UIButton {
+fileprivate class ReminderDoneButton: UIButton {
     var id: Reminder.ID?
 }

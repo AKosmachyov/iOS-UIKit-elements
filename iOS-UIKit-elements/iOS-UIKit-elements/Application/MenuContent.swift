@@ -6,12 +6,14 @@
 //
 
 import Foundation
+import class UIKit.UIViewController
 
 class MenuItem: Identifiable, Hashable, Equatable {
     let title: String
     let subItems: [MenuItem]
     let storyboardName: String?
     let storyboardID: String?
+    let viewController: UIViewController.Type?
     let imageName: String?
     
     init(
@@ -19,12 +21,14 @@ class MenuItem: Identifiable, Hashable, Equatable {
         imageName: String?,
         storyboardName: String? = nil,
         storyboardID: String? = nil,
+        viewController: UIViewController.Type? = nil,
         subItems: [MenuItem] = []
     ) {
         self.title = title
         self.subItems = subItems
         self.storyboardName = storyboardName
         self.storyboardID = storyboardID
+        self.viewController = viewController
         self.imageName = imageName
     }
     
@@ -65,9 +69,10 @@ class MenuContent {
     
     lazy var layoutContainersMenuItem: MenuItem = {
         let items = [
-            MenuItem(title: "UICollectionView", imageName: nil, storyboardName: "Layout Containers", storyboardID: "collectionViewController"),
+            MenuItem(title: "UICollectionView", imageName: nil, storyboardName: "Layout Containers", storyboardID: "listCollectionViewController"),
+            MenuItem(title: "UITableView", imageName: nil, storyboardName: "Layout Containers", storyboardID: "tableViewController"),
         ]
-        return MenuItem(title: "Layout Containers", imageName: nil, subItems: items)
+        return MenuItem(title: "Layout Containers", imageName: "square.stack.3d.down.right", subItems: items)
     }()
     
     lazy var contentViewMenuItem: MenuItem = {
@@ -75,6 +80,9 @@ class MenuContent {
     }()
     
     lazy var customComponentsMenuItem: MenuItem = {
-        return MenuItem(title: "Custom Components", imageName: "figure.climbing")
+        let items = [
+            MenuItem(title: "Skeleton placeholder", imageName: nil, viewController: SkeletonPlaceholderViewController.self)
+        ]
+        return MenuItem(title: "Custom Components", imageName: "figure.climbing", subItems: items)
     }()
 }

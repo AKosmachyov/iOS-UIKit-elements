@@ -1,5 +1,5 @@
 //
-//  HomeViewController.swift
+//  TableViewController.swift
 //  iOS-UIKit-elements
 //
 //  Created by Alexander Kosmachyov on 10.03.22.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class HomeViewController: UITableViewController {
+class TableViewController: UITableViewController {
     var array = [
         [("Form control", nil), ("UITextField", nil), ("UIButton", nil)],
         [("Layout Containers", nil), ("UICollectionViewController", "collectionViewController")],
@@ -17,7 +17,7 @@ class HomeViewController: UITableViewController {
     typealias ListItem = (title: String, storyboardId: String?)
 }
 
-extension HomeViewController {
+extension TableViewController {
     override func numberOfSections(in tableView: UITableView) -> Int {
         return array.count
     }
@@ -38,16 +38,16 @@ extension HomeViewController {
     }
 }
 
-extension HomeViewController: UICollectionViewDelegate {
+extension TableViewController: UICollectionViewDelegate {
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        let tuple = array[indexPath.section][indexPath.row + 1]
 //        guard let id = tuple.1 else { return }
 //        let storyboard = UIStoryboard(name: "Main", bundle: nil)
 //        let controller = storyboard.instantiateViewController(withIdentifier: id)
         
-        let storyboard = UIStoryboard(name: "Layout Containers", bundle: nil)
+//        let storyboard = UIStoryboard(name: "Layout Containers", bundle: nil)
 //        let controller = // storyboard.instantiateViewController(withIdentifier: id)
-        let controller = storyboard.instantiateInitialViewController()!
-        navigationController?.pushViewController(controller, animated: true)
+//        let controller = storyboard.instantiateInitialViewController()!
+//        navigationController?.pushViewController(controller, animated: true)
     }
 }
