@@ -39,6 +39,9 @@
 * <a id='picker-view'></a>(<a href='#picker-view'>link</a>)(<a href='https://developer.apple.com/documentation/uikit/uipickerview'>🍏 Developer</a>) **UIPickerView** 
 <br> A view that uses a spinning-wheel or slot-machine metaphor to show one or more sets of values.
 
+* <a id='activity-indicator-view'></a>(<a href='#activity-indicator-view'>link</a>)(<a href='https://developer.apple.com/documentation/uikit/uiactivityindicatorview'>🍏 Developer</a>) **UIActivityIndicatorView** 
+<br> A view that shows that a task is in progress.
+
 ## Layout Containers
 
 * <a id='stack-view'></a>(<a href='#stack-view'>link</a>)(<a href='https://developer.apple.com/documentation/uikit/uistackview'>🍏 Developer</a>) **UIStackView** 
@@ -56,6 +59,12 @@ https://medium.com/@esskeetit/как-работает-uiscrollview-2e7052032d97#
 <br> An object that manages an ordered collection of data items and presents them using customizable layouts.
 
 [Apple: Model collection views](https://developer.apple.com/documentation/uikit/views_and_controls/collection_views/implementing_modern_collection_views)
+
+* <a id='collection-view-cell'></a>(<a href='#collection-view-cell'>link</a>)(<a href='https://developer.apple.com/documentation/uikit/uicollectionviewcell'>🍏 Developer</a>) **UICollectionViewCell** 
+<br> A single data item when that item is within the collection view’s visible bounds.
+
+* <a id='collection-reusable-view'></a>(<a href='#collection-reusable-view'>link</a>)(<a href='https://developer.apple.com/documentation/uikit/uicollectionreusableview'>🍏 Developer</a>) **UICollectionReusableView** 
+<br> A view that defines the behavior for all cells and supplementary views presented by a collection view.
 
 * <a id='segment'></a>(<a href='#segment'>link</a>)(<a href='https://developer.apple.com/documentation/uikit/uisegmentedcontrol'>🍏 Developer</a>) **UISegmentedControl** 
 <br> A horizontal control that consists of multiple segments, each segment functioning as a discrete button.
@@ -107,7 +116,6 @@ https://medium.com/@esskeetit/как-работает-uiscrollview-2e7052032d97#
 * <a id=''></a>(<a href='#'>link</a>)(<a href=''>🍏 Developer</a>) **** 
 <br> 
 
-- UIActivityIndicatorView
 - UIProgressView
 - UIVisualEffectView
 - CLLocationButton
@@ -123,9 +131,6 @@ https://medium.com/@esskeetit/как-работает-uiscrollview-2e7052032d97#
 - UIMenu
 - UIView
 - UIContainerView
-
-- UICollectionViewCell
-- UICollectionReusableView
 
 Gestures
 UIViewController

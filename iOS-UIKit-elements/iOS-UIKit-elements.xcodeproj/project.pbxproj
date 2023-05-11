@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		852B7A9929D6080200D5F719 /* SkeletonPlaceholderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852B7A9829D6080200D5F719 /* SkeletonPlaceholderViewController.swift */; };
+		852E2EC42A0D36AF00A3CD31 /* GridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852E2EC32A0D36AF00A3CD31 /* GridViewController.swift */; };
 		856B5970290E9BB200DAC1DD /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856B596F290E9BB200DAC1DD /* MenuViewController.swift */; };
 		856B5972290E9F5600DAC1DD /* MenuContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856B5971290E9F5600DAC1DD /* MenuContent.swift */; };
 		857A35F827DA8C63006738B6 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 857A35F727DA8C63006738B6 /* TableViewController.swift */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		852B7A9829D6080200D5F719 /* SkeletonPlaceholderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonPlaceholderViewController.swift; sourceTree = "<group>"; };
+		852E2EC32A0D36AF00A3CD31 /* GridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridViewController.swift; sourceTree = "<group>"; };
 		856B596F290E9BB200DAC1DD /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		856B5971290E9F5600DAC1DD /* MenuContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuContent.swift; sourceTree = "<group>"; };
 		857A35F727DA8C63006738B6 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +63,14 @@
 			path = "Custom Components";
 			sourceTree = "<group>";
 		};
+		852E2EC22A0D365500A3CD31 /* Collection view */ = {
+			isa = PBXGroup;
+			children = (
+				852E2EC32A0D36AF00A3CD31 /* GridViewController.swift */,
+			);
+			path = "Collection view";
+			sourceTree = "<group>";
+		};
 		856B56D8290E978D00DAC1DD /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -85,6 +95,7 @@
 		85AAED502807487B00380B75 /* Layout Containers */ = {
 			isa = PBXGroup;
 			children = (
+				852E2EC22A0D365500A3CD31 /* Collection view */,
 				85E655E52809F2D000FBA69C /* Layout Containers.storyboard */,
 				857A35F727DA8C63006738B6 /* TableViewController.swift */,
 				85CB770227D7E39800A18A6A /* ListСollectionViewController.swift */,
@@ -211,6 +222,7 @@
 				857DF54F27DBA80700CC3164 /* TextFieldController.swift in Sources */,
 				852B7A9929D6080200D5F719 /* SkeletonPlaceholderViewController.swift in Sources */,
 				85CB770327D7E39800A18A6A /* ListСollectionViewController.swift in Sources */,
+				852E2EC42A0D36AF00A3CD31 /* GridViewController.swift in Sources */,
 				856B5972290E9F5600DAC1DD /* MenuContent.swift in Sources */,
 				85CB76F127D7CD7A00A18A6A /* SceneDelegate.swift in Sources */,
 			);

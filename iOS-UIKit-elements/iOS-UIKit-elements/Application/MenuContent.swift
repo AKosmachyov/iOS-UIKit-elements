@@ -68,8 +68,13 @@ class MenuContent {
     }()
     
     lazy var layoutContainersMenuItem: MenuItem = {
+        let collectionViewMenuItem = [
+            MenuItem(title: "List", imageName: nil, storyboardName: "Layout Containers", storyboardID: "listCollectionViewController"),
+            MenuItem(title: "Grid", imageName: nil, viewController: GridViewController.self),
+        ]
+        
         let items = [
-            MenuItem(title: "UICollectionView", imageName: nil, storyboardName: "Layout Containers", storyboardID: "listCollectionViewController"),
+            MenuItem(title: "UICollectionView", imageName: nil, subItems: collectionViewMenuItem),
             MenuItem(title: "UITableView", imageName: nil, storyboardName: "Layout Containers", storyboardID: "tableViewController"),
         ]
         return MenuItem(title: "Layout Containers", imageName: "square.stack.3d.down.right", subItems: items)
