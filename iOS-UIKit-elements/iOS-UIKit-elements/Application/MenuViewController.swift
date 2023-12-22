@@ -31,6 +31,14 @@ class MenuViewController: UIViewController {
         configureDataSource()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        #if DEBUG
+        let item = MenuItem(title: "Grid", imageName: nil, viewController: GridViewController.self)
+        showItem(item)
+        #endif
+    }
+    
     private func configureCollectionView() {
         let collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: generateLayout())
         view.addSubview(collectionView)

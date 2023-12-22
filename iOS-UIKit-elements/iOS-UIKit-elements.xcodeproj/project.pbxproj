@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		851BF5FF2A02E78A00E2E8D5 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851BF5FE2A02E78A00E2E8D5 /* File.swift */; };
+		851BF6022A02F0DE00E2E8D5 /* CircleProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851BF6012A02F0DE00E2E8D5 /* CircleProgressView.swift */; };
+		851BF6052A02F17E00E2E8D5 /* CircleActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851BF6042A02F17E00E2E8D5 /* CircleActivityIndicatorView.swift */; };
+		851BF6072A02F23700E2E8D5 /* ActivityIndicatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 851BF6062A02F23700E2E8D5 /* ActivityIndicatorViewController.swift */; };
 		852B7A9929D6080200D5F719 /* SkeletonPlaceholderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852B7A9829D6080200D5F719 /* SkeletonPlaceholderViewController.swift */; };
 		852E2EC42A0D36AF00A3CD31 /* GridViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 852E2EC32A0D36AF00A3CD31 /* GridViewController.swift */; };
 		856B5970290E9BB200DAC1DD /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 856B596F290E9BB200DAC1DD /* MenuViewController.swift */; };
@@ -25,6 +29,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		851BF5FE2A02E78A00E2E8D5 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
+		851BF6012A02F0DE00E2E8D5 /* CircleProgressView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleProgressView.swift; sourceTree = "<group>"; };
+		851BF6042A02F17E00E2E8D5 /* CircleActivityIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleActivityIndicatorView.swift; sourceTree = "<group>"; };
+		851BF6062A02F23700E2E8D5 /* ActivityIndicatorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityIndicatorViewController.swift; sourceTree = "<group>"; };
 		852B7A9829D6080200D5F719 /* SkeletonPlaceholderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SkeletonPlaceholderViewController.swift; sourceTree = "<group>"; };
 		852E2EC32A0D36AF00A3CD31 /* GridViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridViewController.swift; sourceTree = "<group>"; };
 		856B596F290E9BB200DAC1DD /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
@@ -55,6 +63,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		851BF6002A02F07000E2E8D5 /* ContentView */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ContentView;
+			sourceTree = "<group>";
+		};
+		851BF6032A02F12900E2E8D5 /* ActivityIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				851BF6012A02F0DE00E2E8D5 /* CircleProgressView.swift */,
+				851BF6042A02F17E00E2E8D5 /* CircleActivityIndicatorView.swift */,
+				851BF6062A02F23700E2E8D5 /* ActivityIndicatorViewController.swift */,
+			);
+			path = ActivityIndicator;
+			sourceTree = "<group>";
+		};
 		852B7A9729D6074000D5F719 /* Custom Components */ = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +111,7 @@
 		857DF54D27DBA7EC00CC3164 /* Form control */ = {
 			isa = PBXGroup;
 			children = (
+				851BF6032A02F12900E2E8D5 /* ActivityIndicator */,
 				857DF54E27DBA80700CC3164 /* TextFieldController.swift */,
 				85B840AE2A0188E60023083C /* FormControl.storyboard */,
 			);
@@ -99,6 +125,7 @@
 				85E655E52809F2D000FBA69C /* Layout Containers.storyboard */,
 				857A35F727DA8C63006738B6 /* TableViewController.swift */,
 				85CB770227D7E39800A18A6A /* ListСollectionViewController.swift */,
+				851BF5FE2A02E78A00E2E8D5 /* File.swift */,
 			);
 			path = "Layout Containers";
 			sourceTree = "<group>";
@@ -124,6 +151,7 @@
 			children = (
 				85CB76FC27D7CD7B00A18A6A /* Info.plist */,
 				856B56D8290E978D00DAC1DD /* Application */,
+				851BF6002A02F07000E2E8D5 /* ContentView */,
 				852B7A9729D6074000D5F719 /* Custom Components */,
 				857DF54D27DBA7EC00CC3164 /* Form control */,
 				85AAED502807487B00380B75 /* Layout Containers */,
@@ -216,14 +244,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				857A35F827DA8C63006738B6 /* TableViewController.swift in Sources */,
+				851BF6052A02F17E00E2E8D5 /* CircleActivityIndicatorView.swift in Sources */,
 				856B5970290E9BB200DAC1DD /* MenuViewController.swift in Sources */,
 				85B840AD2A01852F0023083C /* BaseListViewController.swift in Sources */,
 				85CB76EF27D7CD7A00A18A6A /* AppDelegate.swift in Sources */,
+				851BF6072A02F23700E2E8D5 /* ActivityIndicatorViewController.swift in Sources */,
 				857DF54F27DBA80700CC3164 /* TextFieldController.swift in Sources */,
+				851BF5FF2A02E78A00E2E8D5 /* File.swift in Sources */,
 				852B7A9929D6080200D5F719 /* SkeletonPlaceholderViewController.swift in Sources */,
 				85CB770327D7E39800A18A6A /* ListСollectionViewController.swift in Sources */,
 				852E2EC42A0D36AF00A3CD31 /* GridViewController.swift in Sources */,
 				856B5972290E9F5600DAC1DD /* MenuContent.swift in Sources */,
+				851BF6022A02F0DE00E2E8D5 /* CircleProgressView.swift in Sources */,
 				85CB76F127D7CD7A00A18A6A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

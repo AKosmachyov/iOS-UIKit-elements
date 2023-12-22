@@ -11,8 +11,9 @@ class GridViewController: UIViewController {
     enum Section {
         case main
     }
+    var lastEl: Int = 2
     
-    var dataSource: UICollectionViewDiffableDataSource<Section, Int>!
+    var dataSource: UICollectionViewDiffableDataSource<Section, String>!
     var collectionView: UICollectionView!
     
     override func viewDidLoad() {
@@ -45,22 +46,35 @@ extension GridViewController {
         collectionView = UICollectionView(frame: view.bounds, collectionViewLayout: createLayout())
         collectionView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         view.addSubview(collectionView)
+        
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Reload",
+                                                            style: .plain, target: self,
+                                                            action: #selector(didPressReload))
     }
     
     private func configureDataSource() {
-        let cellRegistration = UICollectionView.CellRegistration<GridCell, Int> { (cell, indexPath, identifier) in
+        let cellRegistration = UICollectionView.CellRegistration<GridCell, String> { (cell, indexPath, identifier) in
             cell.configure(text: "\(identifier)")
         }
         
-        dataSource = UICollectionViewDiffableDataSource<Section, Int>(collectionView: collectionView) {
-            (collectionView: UICollectionView, indexPath: IndexPath, identifier: Int) -> UICollectionViewCell? in
+        dataSource = UICollectionViewDiffableDataSource<Section, String>(collectionView: collectionView) {
+            (collectionView: UICollectionView, indexPath: IndexPath, identifier: String) -> UICollectionViewCell? in
             return collectionView.dequeueConfiguredReusableCell(using: cellRegistration, for: indexPath, item: identifier)
         }
         
-        var snapshot = NSDiffableDataSourceSnapshot<Section, Int>()
+        var snapshot = NSDiffableDataSourceSnapshot<Section, String>()
         snapshot.appendSections([.main])
-        snapshot.appendItems(Array(0..<100))
+        snapshot.appendItems(["1", "2", "3"])
         dataSource.apply(snapshot, animatingDifferences: false)
+    }
+    
+    @objc func didPressReload() {
+        var snapshot = dataSource.snapshot()
+        
+        let a = String(UUID().uuidString.prefix(6))
+        print("Add", a)
+        snapshot.appendItems([a])
+        dataSource.apply(snapshot)
     }
 }
 
@@ -92,7 +106,8 @@ class GridCell: UICollectionViewCell {
         
         layer.borderColor = UIColor.black.cgColor
         layer.borderWidth = 1
-        contentView.backgroundColor = .lightGray
+//        contentView.backgroundColor = .lightGray
+        contentView.backgroundColor = UIColor(red: 0, green: CGFloat.random(in: 0...1), blue: CGFloat.random(in: 0...1), alpha: 1)
     }
     
     func configure(text: String) {
