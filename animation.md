@@ -35,3 +35,9 @@ Core Animation
 - performSystemAnimation(animation, onViews, options, animations, completion)
 - animateWithDuration(duration, delay, usingSpringWithDamping,  initialSpringVelocity, options, animations, completion)
 - UIViewPropertyAnimator https://habr.com/ru/articles/458970/
+
+Apple samples
+https://developer.apple.com/documentation/uikit/mac_catalyst/uikit_catalog_creating_and_customizing_views_and_controls
+https://developer.apple.com/documentation/uikit/uiimage/building_high-performance_lists_and_collection_views
+https://developer.apple.com/documentation/uikit/views_and_controls/collection_views/implementing_modern_collection_views
+https://developer.apple.com/documentation/uikit/views_and_controls/collection_views/updating_collection_views_using_diffable_data_sources
