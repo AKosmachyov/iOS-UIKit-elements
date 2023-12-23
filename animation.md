@@ -41,3 +41,6 @@ https://developer.apple.com/documentation/uikit/mac_catalyst/uikit_catalog_creat
 https://developer.apple.com/documentation/uikit/uiimage/building_high-performance_lists_and_collection_views
 https://developer.apple.com/documentation/uikit/views_and_controls/collection_views/implementing_modern_collection_views
 https://developer.apple.com/documentation/uikit/views_and_controls/collection_views/updating_collection_views_using_diffable_data_sources
+
+https://github.com/jtrivedi/Apple-Cash-Animation/
+https://github.com/realvjy/temperature-swiftui
